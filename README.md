@@ -10,7 +10,10 @@
   </p>
 </p>
 
-![Contributors](https://img.shields.io/github/contributors/blopker/booper?color=dark-green) ![Issues](https://img.shields.io/github/issues/blopker/booper)
+<p align="center">
+<img src="https://img.shields.io/github/contributors/blopker/booper?color=dark-green" alt="Contributors"> 
+<img src="https://img.shields.io/github/issues/blopker/booper" alt="Issues">
+</p>
 
 ## About The Project
 
