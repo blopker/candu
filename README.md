@@ -6,7 +6,7 @@
     Boop your bike into the right mode
     <br/>
     <br/>
-    <a href="https://github.com/blopker/booper/wiki">Wiki</a>
+    <a href="https://github.com/blopker/booper/wiki">Follow progress on the wiki</a>
   </p>
 </p>
 
