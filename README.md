@@ -3,7 +3,7 @@
   <h3 align="center">Candu</h3>
 
   <p align="center">
-    A bike CAN Bus emulator that Candu anything.
+    A bike CAN Bus add-on that Candu anything.
     <br/>
     <br/>
     <a href="https://github.com/blopker/candu/wiki">Follow progress on the wiki</a>
