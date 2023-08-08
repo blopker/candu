@@ -17,7 +17,7 @@
 
 ## About The Project
 
-The Booper is a hardware device designed to talk directly to a bike's BMS (Battery Management System) and change the mode of the bike. This is useful for bikes that don't have a display or a way to change the mode of the bike. The Booper is designed to be a small, low cost, and easy to use device that can be used on model bike.
+The Booper is a hardware device designed to connect to the bike's Computer Area Network (CAN) and offer the rider more control over the bike's behavior.  For instance, to set and lock the Ride Mode (aka Class Mode) of the bike, to emulate a stock battery handshake, to display system stats like motor temp, current draw, etc. This makes for a "set it and forget it" experience, with no app or smartphone required.  The Booper is designed to be a small, low cost, and easy to use device that can be mounted to the bike as an accessory so it's always on the job, letting you focus on the ride.
 
 ## Status
 
