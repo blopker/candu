@@ -21,4 +21,4 @@ Candu is a hardware device designed to connect to the bike's Computer Area Netwo
 
 ## Status
 
-The Candu is currently in the design phase. The first prototype is being designed and tested. You can follow along with the progress on the [wiki](https://github.com/blopker/candu/wiki).
+Candu is currently in the design phase. The first prototype is being designed and tested. You can follow along with the progress on the [wiki](https://github.com/blopker/candu/wiki).
