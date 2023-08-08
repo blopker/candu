@@ -17,7 +17,7 @@
 
 ## About The Project
 
-The Booper is a hardware device designed to connect to the bike's Computer Area Network (CAN) and offer the rider more control over the bike's behavior.  For instance, to set and lock the Ride Mode (aka Class Mode) of the bike. This makes for a "set it and forget it" experience, with no app or smartphone required.  The Booper is designed to be a small, low cost, and easy to use device that can be mounted to the bike as an accessory that's always on the job, and that customizes the experience to you, letting you focus on the ride.
+The Booper is a hardware device designed to connect to the bike's Computer Area Network (CAN) and offer the rider more control over the bike's behavior.  For instance, to set and lock the Ride Mode (aka Class Mode) of the bike, as well as other possibilities. This makes for a "set it and forget it" experience, with no app or smartphone required.  The Booper is designed to be a small, low cost, and easy to use device that can be mounted to the bike as an accessory that's always on the job, and that customizes the experience to you, letting you focus on the ride.
 
 ## Status
 
