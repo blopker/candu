@@ -1,0 +1,65 @@
+Setting up a CAN sniffer to pull data from Super73 eBikes
+8/8/23 - Paul
+
+1. Browse the Arduino Web IDE site and create an account if you don't already have one.
+
+2. Download the latest "Arduino CreateAgent" from that site and install it on your PC.  A (probably stale) Windows version is also available in this github main file repository.
+
+3. Create a new sketch in the Sketchbook.
+
+4. Import the two libraries "arduino-mcp2515-master.zip" and "arduino-canhacker-master_modified.zip"
+
+5. Open Examples > arduino-canhacker-master > softwareserial_debug.  After the existing line:
+     canHacker = new CanHacker(interfaceStream, debugStream, SPI_CS_PIN);
+   add the line:
+     canHacker->setClock(MCP_8MHZ);
+   The "8MHZ" is based on the frequency printed on the crystal oscillator on the MCP2515 board
+   Leave the line:
+     canHacker->enableLoopback();
+   uncommented for now so we can do a loopback test to verify everything is set up properly.
+   (after we verify all is working, we'll comment this line out for normal operation)
+   Save the example file.  In my case it forced me to use Save As.  That's ok, just remember what you called the Save As, as that is what you'll be uploading to the Arduino.
+
+6. Attach the Arduino to your PC via USB cable.  If you're a Windows user you can check the Windows Device Manager (type Device Manager in taskbar search field) and look under the "Ports" section.  If you're not sure which port corresponds to the Arduino, make a mental note of what is there and then disconnect the Arduino USB cable and then look in that section again to see what disappeared.  Then reconnect the Arduino's USB cable and an additional port item should appear in Windows Device Manager.  This is the port you'll chose as upload target from Arduino Web IDE (and later from within Canhacker when it's time to sniff the network.)
+
+7. Attach the MCP2515 board to the Arduino, following this schematic:
+(complete schematic)
+Do not wire the MCP2515 board to the CAN network of the device in question yet.  Leave the CAN Hi and CAN Lo terminals of the MCP2515 disconnected for now.
+
+7. In Arduino Web IDE, select the attached Arduino and port in the top drop down box, then click the right arrow to upload the "sketch".  Make sure it uploads successfully!
+	(If you've been alternating between having Canhacker attached to the Arduino
+	to sniff, and Arduino Web IDE attached to the Arduino to make a code revision,
+	make sure you have "disconnect"ed the Arduino in Canhacker first before
+	attempting to upload a sketch from Arduino Web IDE to the Arduino.)
+
+8. Install the Canhacker application on your PC
+   Once installed, run Canhacker.  In the Setup menu, choose:
+     CAN Device (pick the option corresponding to the port you found above)
+     COM Baudrate = 115200 bit/s
+     CAN Baudrate = 250 Kbit/s (this is the baud rate of the Super73 high speed CAN bus)
+     (leave the remaining defaults in place)
+   Select the Connect menu item
+   Click the "Single Shot" button.
+   If everything is working, you should see a new line of (simulated) data appear in the Receive window
+
+9. Go back into the softwareserial_debug codefile in the Arduino Web IDE, wherever you saved the copy when you modified this file above.  This time, find the line:
+    canHacker->enableLoopback();
+and comment it out so it looks like this:
+    //canHacker->enableLoopback();
+
+    Upload this sketch to the Arduino again.  Make sure it uploads successfully.
+
+10. Wire up the MCP2515 board to the Super73 bike's CAN network
+    - Where to find the connector
+    - How to connect to it
+    - Be sure to observe proper polarity (CAN Hi vs CAN Lo)
+    - Be sure to use a twisted wire (one twist per inch, or more)
+
+11. Turn on the bike by pressing the power button on the battery.
+
+10. In Canhacker, click "Connect".   If all is well, you should start seeing messages appear in the Receive window.
+
+
+
+(todo - complete these instructions)
+
